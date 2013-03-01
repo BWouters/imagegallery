@@ -3,9 +3,9 @@
 		private $database, $username, $password, $pdo;
 		
 		function __construct() {
-			$this->database = "md155287db103792";
-			$this->username = "md155287db103792";
-			$this->password = "PQn54mp9";
+			$this->database = "databasename";
+			$this->username = "username";
+			$this->password = "password";
 			$this->pdo = new PDO('mysql:host=db.visionsandviews.net;dbname='.$this->database, $this->username, $this->password);
 			$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 		}
