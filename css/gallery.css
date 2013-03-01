@@ -1,0 +1,473 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+CSS stylesheet
+Copyright 2011 - ChilpV
+Feel free to learn, don't dare to rip. 
+September 2011
+
+Grid: 960px grid system 12 columns
+CSS3 validated
+
+Navigation:
+
+1. Body/resets
+1.1 Body
+1.2 Resets
+
+2. a link styling
+
+3.Header/logo/optionsbar/back_to_indexbar
+3.1 Options div opmaak / form / submitbutton
+
+4. Imagefields (index and album)
+
+5. Pagination styles (current page class included)
+
+6. Back to top style
+
+7. Footer
+
+*/
+
+
+/* 1. Body/resets */
+/* 1.1 Body */
+body {
+	margin:0px 0px 0px 0px;
+	background:#ececec;
+	font-size:12px;
+	font-family:Verdana, Geneva, sans-serif;
+	word-wrap: break-word;
+}
+::selection {
+ background: #363636;
+ color:#efefef;
+}
+
+::-moz-selection {
+ background: #363636;
+ color:#efefef;
+}
+/*1.2 Resets */
+p {
+	margin:0;
+}
+* {
+	outline:0;
+}
+li, ul {
+	padding:0;
+	margin:0;
+}
+h1 {
+	margin:20px 0px 20px 0px;
+	font-weight:200;
+	font-size:25px;
+}
+h2 {
+	margin:0px 0px 20px 0px;
+	font-weight:200;
+	font-size:20px;
+}
+/* a link styling */
+a:link, a:visited {
+	color:#373737;
+	text-decoration:none;
+}
+a:hover, a:active {
+	color:#7d7d7d;
+	text-decoration:none;
+}
+/* 3. Header/logo/optionsbar/back_to_indexbar */
+
+#topNav{
+	width: 90%;
+	top: 0px;
+	height: 40px;
+}
+
+#topNav p{
+	padding: 10px;
+	float: left;
+	width: 300px;
+}
+
+#mainContent{
+	float: left;
+}
+
+#container {
+	margin:0 auto;
+	height:100%;
+	width:940px;
+	padding:0px 10px 0px 10px;
+}
+.logo {
+	height:152px;
+	width:153px;
+	border:none;
+}
+#logo_top {
+	height:160px;
+	width:190px;
+	float:left;
+	padding:10px 0px 0px 0px;
+}
+#back_to_index {
+	width:880px;
+	height:29px;
+	background:#f6f6f6;
+	border-radius:10px 10px 10px 10px;
+	border:solid #e0e0e0;
+	border-width:1px;
+	float:left;
+	padding:5px 0px 5px 20px;
+}
+
+#back_to_index img{
+	height: 20px;
+	float: right;
+	margin-right: 20px;
+}
+	
+#optionsbar {
+	width:940px;
+	height:35px;
+	background:#f6f6f6;
+	border-radius:10px 10px 0px 0px;
+	border:solid #e0e0e0;
+	border-width:1px 1px 0px 1px;
+	float:left;
+}
+#optionsbar_onder {
+	width:940px;
+	height:7px;
+	background:#f6f6f6;
+	border-radius:0px 0px 10px 10px;
+	border:solid #e0e0e0;
+	border-width:0px 1px 1px 1px;
+	float:left;
+}
+#optionsbar_text {
+	height:22px;
+	width:470px;
+	padding:13px 0px 0px 20px;
+	float:left;
+}
+#optionsbar_text p {
+	color:#373737;
+	font-size:13px;
+}
+.drop_down {
+	height:24px;
+	width:23px;
+	float:right;
+	margin:10px 20px 0px 0px;
+}
+
+
+#dialog-updateTemplate img{
+	width: 14px;
+	margin-left: 3px;
+	padding-top: 2px;
+}
+/* 3.1 Options div opmaak / form / submitbutton */
+#options {
+	width:940px;
+	height:120px;
+	float:left;
+	background:#f6f6f6;
+	border:solid #e0e0e0;
+	border-width:0px 1px 0px 1px;
+	margin:0px;
+	display:none;
+}
+.form {
+	margin:20px 0px 0px 20px;
+}
+.submitbutton {
+	height:25px;
+	width:75px;
+	background:url(../images/submitbutton.png) top no-repeat;
+	border:none;
+	color:#f0f0f0;
+	cursor:pointer;
+	margin:0px 0px 0px 20px;
+}
+.submitbutton:hover {
+	height:25px;
+	width:75px;
+	background:url(../images/submitbutton.png) bottom no-repeat;
+}
+/* 4. Imagefields (index and album) */
+.imagefield {
+	width:200px;
+	height:298px;
+	float:left;
+	background:#f0f0f0;
+	border:1px solid #e0e0e0;
+	border-radius:10px;
+	margin:20px 20px 0px 0px;
+	padding:20px 0px 0px 18px;
+}
+.imagefield_last {
+	width:200px;
+	height:298px;
+	float:left;
+	background:#f0f0f0;
+	border-radius:10px;
+	border:1px solid #e0e0e0;
+	margin:20px 0px 0px 0px;
+	padding:20px 0px 0px 18px;
+}
+.imagefield_album {
+	width:190px;
+	height:248px;
+	float:left;
+	background:#f0f0f0;
+	border:1px solid #e0e0e0;
+	border-radius:10px;
+	margin:20px 20px 0px 0px;
+	padding:30px 0px 0px 18px;
+	position: relative;
+}
+
+.imagefield_last_album {
+	width:200px;
+	height:248px;
+	float:left;
+	background:#f0f0f0;
+	border-radius:10px;
+	border:1px solid #e0e0e0;
+	margin:20px 0px 0px 0px;
+	padding:70px 0px 0px 18px;
+}
+.image_album_name {
+	height:30px;
+	width:180px;
+	float:left;
+	text-align:center;
+	font-size:9px;
+	color:#353535;
+	padding:20px 0px 0px 0px;
+}
+.image {
+	height:160px;
+	width:180px;
+	float:left;
+	border-radius:10px;
+	overflow:hidden;
+	/*border-style:solid;
+	border-width: 1px;
+	border-color:#e0e0e0;*/
+	/*background:#464646;*/
+}
+
+.image img{
+	margin: auto;
+	display:block;
+}
+.image_info {
+	height:130px;
+	width:180px;
+	float:left;
+	line-height:20px;
+	text-align:center;
+}
+.name {
+	font-size:16px;
+	color:#252525;
+	margin:10px 0px 0px 0px;
+}
+.number {
+	font-size:8px;
+	color:#7d7d7d;
+}
+.date {
+	font-size:9px;
+	color:#7d7d7d;
+}
+.share_download {
+	text-align:center;
+	width:180px;
+	height:40px;
+	padding:20px 0px 0px 0px;
+}
+.download {
+	margin:0px 0px 0px 10px;
+}
+
+/*5 Pagination */
+#pagination {
+	width:620px;
+	height:50px;
+	float:left;
+	margin:20px 0px 0px 0px;
+	padding:10px 0px 0px 0px;
+}
+#pagination ul, #pagination li {
+	margin:0px;
+	float:left;
+	list-style:none;
+}
+#pagination ul {
+	margin:0px 0px 0px -10px;
+}
+#pagination li {
+	margin-left:10px;
+	text-align:center;
+	padding:7px 0px 0px 0px;
+}
+.pagination_current {
+	width:30px;
+	height:23px;
+	padding:0px 0px 0px 0px;
+	color:#FFF;
+	background:url(../images/pagination.png) bottom no-repeat;
+	text-shadow: 1px 1px 0px #000;
+}
+.pagination_active {
+	width:30px;
+	height:23px;
+	padding:0px 0px 0px 0px;
+	color:#363636;
+	background:url(../images/pagination.png) top no-repeat;
+	text-shadow: 1px 1px 0px #dadada;
+}
+.pagination_active:hover {
+	width:30px;
+	height:23px;
+	padding:5px 0px 0px 0px;
+	color:#363636;
+	background:url(../images/pagination.png) center no-repeat;
+	text-shadow: 1px 1px 0px #FFF;
+}
+.pagination_none {
+	color:#363636;
+	text-shadow: 1px 1px 0px #FFF;
+}
+/* 6. Back to top style */
+.back_to_top {
+	margin:70px 0px 0px 60px;
+	border:none;
+}
+/* 7. Footer */
+
+#footer_background {
+	background:#252525 url(../images/footer_background.png) repeat-x top;
+	width:100%;
+	height:100px;
+	float:left;
+	margin:20px 0px 0px 0px;
+}
+#footer_container {
+	margin:0 auto;
+	width:940px;
+	height:100px;
+	padding:0px 10px 0px 10px;
+}
+#footer_left {
+	width:460px;
+	height:100px;
+	float:left;
+	margin:0px 20px 0px 0px;
+}
+#footer_sitemap {
+	height:30px;
+	width:460px;
+	padding:20px 0px 0px 0px;
+	float:left;
+}
+#footer_sitemap ul, #footer_sitemap li {
+	float:left;
+	list-style:none;
+}
+#footer_sitemap li {
+	margin-right:40px;
+}
+#footer_sitemap a:link, #footer_sitemap a:visited {
+	color:#f6f6f6;
+	text-decoration:none;
+}
+#footer_sitemap a:active, #footer_sitemap a:hover {
+	color:#d2d2d2;
+	text-decoration:none;
+}
+#footer_copyrights {
+	height:30px;
+	width:460px;
+	float:left;
+	color:#4e4e4e;
+	padding:20px 0px 0px 0px;
+}
+#footer_center {
+	height:65px;
+	width:340px;
+	float:left;
+	padding:35px 0px 0px 0px;
+}
+#footer_right {
+	height:100px;
+	width:100px;
+	float:left;
+	margin:0px 0px 0px 20px;
+}
+.facebook {
+	height:31px;
+	width:32px;
+	float:left;
+	margin:0px 0px 0px 40px;
+	background: url(../images/social%20media.png) top left no-repeat;
+	cursor:pointer;
+}
+.twitter {
+	height:31px;
+	width:32px;
+	float:left;
+	margin:0px 0px 0px 40px;
+	background:url(../images/social%20media.png) top center no-repeat;
+	cursor:pointer;
+}
+.mail {
+	height:31px;
+	width:32px;
+	float:left;
+	margin:0px 0px 0px 40px;
+	background:url(../images/social%20media.png) top right no-repeat;
+	cursor:pointer;
+}
+.facebook:hover {
+	height:31px;
+	width:32px;
+	float:left;
+	margin:0px 0px 0px 40px;
+	background:url(../images/social%20media.png) bottom left no-repeat;
+	cursor:pointer;
+}
+.twitter:hover {
+	height:31px;
+	width:32px;
+	float:left;
+	margin:0px 0px 0px 40px;
+	background:url(../images/social%20media.png) bottom center no-repeat;
+	cursor:pointer;
+}
+.mail:hover {
+	height:31px;
+	width:32px;
+	float:left;
+	margin:0px 0px 0px 40px;
+	background:url(../images/social%20media.png) bottom right no-repeat;
+	cursor:pointer;
+}
+
+
+/** 8. jQuery styles and layout **/
+	
+#dialog-fileName input{
+	width: 300px;
+	padding-top: 2px;
+	padding-left: 5px;
+}
