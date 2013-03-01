@@ -3,11 +3,11 @@
 		private $database, $username, $password, $pdo;
 		
 		function __construct() {
-			$this->database = "md155287db103792";
-			$this->username = "md155287db103792";
-			$this->password = "PQn54mp9";
+			$this->database = "database";
+			$this->username = "username";
+			$this->password = "password";
 			try{
-				$this->pdo = new PDO('mysql:host=db.visionsandviews.net;dbname='.$this->database, $this->username, $this->password);
+				$this->pdo = new PDO('mysql:host=hostname;dbname='.$this->database, $this->username, $this->password);
 				$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 			}catch(PDOException $e){
 				echo '<pre>'; 
