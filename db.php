@@ -6,7 +6,7 @@
 			$this->database = "databasename";
 			$this->username = "username";
 			$this->password = "password";
-			$this->pdo = new PDO('mysql:host=db.visionsandviews.net;dbname='.$this->database, $this->username, $this->password);
+			$this->pdo = new PDO('mysql:host=host;dbname='.$this->database, $this->username, $this->password);
 			$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 		}
 		
